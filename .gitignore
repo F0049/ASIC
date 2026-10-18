@@ -1,0 +1,9 @@
+.venv/
+.direnv/
+runs/
+__pycache__/
+sim_build/
+*.vcd
+.DS_Store
+export/*/
+reports/*/

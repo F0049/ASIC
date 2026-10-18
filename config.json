@@ -1,0 +1,7 @@
+{
+  "DESIGN_NAME": "your_top_module",
+  "VERILOG_FILES": "dir::source_code/rtl/*.v",
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 10.0,
+  "PDK": "sky130A"
+}

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Blocks commits on 'main' unless you opt in with ALLOW_MAIN=1 (scripts/branch.sh does this for you).
+branch="$(git symbolic-ref --short HEAD 2>/dev/null || true)"
+if [[ "$branch" == "main" && "${ALLOW_MAIN:-0}" != "1" ]]; then
+  echo "Commit blocked: you're on main. Work on your dev/<name> branch."
+  echo "To put chosen files on main on purpose:  scripts/branch.sh promote -m \"msg\" <paths...>"
+  exit 1
+fi
